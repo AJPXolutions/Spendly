@@ -1,0 +1,26 @@
+.settings-page {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+.settings-subtitle {
+  color: var(--text2);
+  margin-bottom: 1rem;
+}
+
+.settings-card {
+  max-width: 420px;
+}
+
+.profile-box {
+  border: 1px solid var(--border);
+  background: var(--bg3);
+  border-radius: 10px;
+  padding: 0.75rem 0.9rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  color: var(--text2);
+  font-size: 0.86rem;
+}

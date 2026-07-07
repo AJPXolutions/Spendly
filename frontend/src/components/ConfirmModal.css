@@ -1,0 +1,9 @@
+.confirm-modal {
+  max-width: 420px;
+}
+
+.confirm-message {
+  color: var(--text2);
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}

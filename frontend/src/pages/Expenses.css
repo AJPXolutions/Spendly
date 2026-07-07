@@ -1,0 +1,204 @@
+.expenses-page {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+.page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+  gap: 1rem;
+}
+
+.page-header h1 {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.header-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+  align-items: center;
+}
+
+.filters input, .filters select { width: auto; flex: 1 1 140px; }
+
+.recurring-card {
+  margin-bottom: 1rem;
+}
+
+.recurring-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  margin-top: 0.75rem;
+}
+
+.recurring-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.45rem 0.6rem;
+}
+
+.loading {
+  text-align: center;
+  padding: 3rem;
+  color: var(--text2);
+}
+
+.expenses-summary {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.875rem;
+  color: var(--text2);
+  margin-bottom: 0.75rem;
+  padding: 0 0.25rem;
+}
+
+.expenses-summary .total {
+  font-weight: 700;
+  color: var(--text);
+  font-size: 1rem;
+}
+
+.expenses-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.pagination {
+  margin-top: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.pagination-label {
+  font-size: 0.85rem;
+  color: var(--text2);
+}
+
+.jump-box {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.jump-box input {
+  width: 70px;
+  padding: 0.35rem 0.55rem;
+}
+
+.expense-item {
+  display: grid;
+  grid-template-columns: 48px 1fr auto auto;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.9rem 1rem;
+}
+
+.exp-cat {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  font-size: 1.4rem;
+  flex-shrink: 0;
+}
+
+.exp-info {
+  overflow: hidden;
+}
+
+.exp-desc {
+  font-weight: 600;
+  font-size: 0.95rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.exp-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.35rem;
+  flex-wrap: wrap;
+}
+
+.exp-date {
+  font-size: 0.78rem;
+  color: var(--text2);
+}
+
+.exp-notes {
+  font-size: 0.78rem;
+  color: var(--text2);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 180px;
+}
+
+.exp-amount {
+  font-weight: 700;
+  font-size: 1rem;
+  white-space: nowrap;
+  color: var(--text);
+}
+
+.exp-actions {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.exp-actions .btn {
+  padding: 0.35rem 0.6rem;
+  font-size: 0.85rem;
+}
+
+@media (max-width: 580px) {
+  .expense-item {
+    grid-template-columns: 42px 1fr;
+    grid-template-rows: auto auto;
+  }
+  .exp-amount { grid-column: 2; }
+  .exp-actions { grid-column: 1 / -1; justify-content: flex-end; }
+  .pagination {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .pagination .btn {
+    width: 100%;
+    justify-content: center;
+  }
+  .pagination-label {
+    text-align: center;
+  }
+  .header-actions {
+    width: 100%;
+    justify-content: flex-end;
+  }
+  .jump-box {
+    width: 100%;
+  }
+  .jump-box input {
+    flex: 1;
+  }
+}
